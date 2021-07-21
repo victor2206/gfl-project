@@ -1,0 +1,64 @@
+$black: black;
+$black-rgba: rgba(0,0,0,0.7);
+$white: #FFF4FF;
+$gray: #3F3F3F;
+$gold: #F6F624;
+$orange: #db9509;
+$singularity-button:#080835;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://i.redd.it/lwmk10dfzxh21.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  padding: 0px 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/*utilities classes*/
+.clip-path{
+  clip-path: polygon(10% 0, 100% 0, 99% 70%, 90% 100%, 0 100%, 0 30%);
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sparkles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom:-10%;
+  opacity: 0.2;
+  animation: sparkle 10s linear infinite;
+}
+@keyframes sparkle{
+  0%{opacity: 1; bottom: -10%;}
+  100%{opacity: 0; bottom:95%}
+}
+.sparkles > * {
+  width: 2vw;
+}
+
+
+
+

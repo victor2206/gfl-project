@@ -1,0 +1,60 @@
+@import "../App.scss";
+
+$triangle-size: 1.8vw;
+
+.container-bottom {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  margin-right: 5%;
+}
+
+.container-bottom > * {
+  width: 15%;
+  background-color: $black-rgba;
+  color: $white;
+  font-size: 2vw;
+  padding: 1px;
+}
+
+.first-menu {
+  display: flex;
+}
+.second-menu {
+  display: none;
+  justify-content: flex-end;
+}
+.second-menu > * {
+  margin: 0 1%;
+}
+
+.triangle-container {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+  padding: 0.7vw;
+  padding-bottom: 0.3vw;
+  background-color: $black-rgba;
+  margin-right: 5%;
+}
+.triangle-container > * {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.triangle-up {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  border-width: $triangle-size $triangle-size 0 0;
+  border-color: $white transparent transparent transparent;
+}
+.triangle-down {
+  transform: translate(5%, 5%);
+  border-width: 0 0 $triangle-size $triangle-size;
+  border-color: transparent transparent $gray transparent;
+}

@@ -1,0 +1,102 @@
+@import "../App.scss";
+
+.carousel_container{
+  background-color: $black;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  bottom: 2.5%;
+  left: 5%;
+  -webkit-box-shadow: 0px 0px 3vw 1vw $black; 
+  box-shadow: 0px 0px 3vw 1vw $black;
+}
+.carousel_slide{
+  background-size: cover;
+}
+.carousel_image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel_track-container{
+  position: relative;
+  height: 100%;
+  border: solid 0.5vw $black-rgba;
+  border-top: solid 0.1vw $black-rgba;
+  border-bottom: solid 0.1vw $black-rgba; 
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.carousel_track{
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 500%;
+  display: flex;
+  flex-shrink: 0;
+  transition: all ease-in 0.2s;
+}
+.carousel_slide{
+  top:0;
+  bottom:0;
+  width:100%;
+  flex-basis: 20%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel_button{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  font-size: 3.2vw;
+  font-weight: bold;
+  color:$black-rgba;
+  cursor:pointer;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  transition: all 0.15s;
+  z-index: 1;
+  opacity: 0.9;
+}
+.carousel_button:hover{
+  color: $white;
+  background: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+  font-size: 3vw;
+}
+$slide-button-disyance: -18%;
+.carousel_button--left{
+  left: $slide-button-disyance;
+}
+.carousel_button--right{
+  right: $slide-button-disyance;
+}
+.slideup-indicator{
+  display: block;
+  position: absolute;
+  top:-55%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 5vw;
+  color: $black;
+  cursor: pointer;
+  z-index:999;
+  opacity: 0.2;
+  animation: slideup-animation .7s alternate infinite;
+}
+@keyframes slideup-animation{
+  from{opacity: 0.2; top: -55%;}
+  to{opacity: 0.8; top: -65%;}
+}

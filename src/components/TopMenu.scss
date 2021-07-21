@@ -1,0 +1,245 @@
+@import "../App.scss";
+
+.container-top {
+  border: none;
+  -webkit-box-shadow: 1px 5px 25px 2px rgba(0, 0, 0, 0.77);
+  box-shadow: 1px 5px 25px 2px rgba(0, 0, 0, 0.77);
+  background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.8));
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+.resources-wrapper {
+  display: flex;
+  min-width: 50%;
+}
+.resources-container {
+  display: inline-block;
+  width: 100%;
+}
+.resources {
+  position: relative; /*to position resource name*/
+  background-image: linear-gradient(
+    to left,
+    transparent 20%,
+    rgba(0, 0, 0, 0.4) 80%
+  );
+  background-image: linear-gradient(
+    to top,
+    transparent 20%,
+    rgba(0, 0, 0, 0.4) 80%
+  );
+  display: flex;
+  padding-top: 8%;
+}
+.resources-name-number{
+  width: 70%;
+}
+.resources-name {
+  color: $white;
+  font-size: 1vw;
+}
+.resources-number {
+  color: $orange;
+  font-size: 1.8vw;
+}
+.resources-bottom {
+  background-image: linear-gradient(to right, $orange 20%, $gold);
+  height: 0.3vw;
+}
+.resources-img {
+  color: $gold;
+  width: 30%;
+}
+$resources-plus-width: 2.2vw;
+.resources-plus {
+  width: $resources-plus-width;
+  height: $resources-plus-width;
+  background-color: $black;
+  color: $orange;
+  border: solid 1px $orange;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 0.5%;
+  right: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+.player-data {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25%;
+  position: relative;
+  font-size: 2.4vw;
+}
+.player-level {
+  position: absolute;
+  top:-5%;
+  left: -40%;
+  border: 0.7vw solid $orange;
+  border-top-color: #141414;
+  border-radius: 50%;
+  font-size: 1.5vw;
+  padding: 0.7vw;
+  margin-top: 0.1vw;
+}
+.player-name{
+  padding-left: 1vw;
+}
+
+/*manpower icon*/
+.manpower-icon {
+  color: $white;
+  position: absolute;
+  margin-left: 0.5vw;
+  margin-top: 1.5vw;
+  width: 2.2vw;
+  height: 0.9vw;
+  $borderW:0.1vw;
+  border-left: solid $borderW currentColor;
+  border-right: solid $borderW currentColor;
+  border-top: solid $borderW currentColor;
+  border-bottom: solid $borderW transparent;
+  background-color: currentColor;
+  $borderR:2vw;
+  border-radius: $borderR $borderR 0 0;
+  z-index: 10;
+}
+.manpower-icon:before {
+  content: '';
+  position: absolute;
+  left: 0.42vw;
+  top: -1.4vw;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+  z-index: 10;
+}
+@media only screen and (max-width: 700px) {
+  .manpower-icon:before{
+    top: -1.6vw;
+    left: 0.35vw;
+  }
+}
+/*manpower icon 2*/
+.manpower-icon-2 {
+  color: $white;
+  position: absolute;
+  margin-left: 1.7vw;
+  margin-top: 1.5vw;
+  width: 2.2vw;
+  height: 0.9vw;
+  $borderW:0.1vw;
+  border-left: solid $borderW currentColor;
+  border-right: solid $borderW currentColor;
+  border-top: solid $borderW currentColor;
+  border-bottom: solid $borderW transparent;
+  background-color: currentColor;
+  $borderR:2vw;
+  border-radius: $borderR $borderR 0 0;
+  z-index: 1;
+}
+.manpower-icon-2:before {
+  content: '';
+  position: absolute;
+  left: 0.42vw;
+  top: -1.4vw;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+  z-index: 1;
+}
+@media only screen and (max-width: 700px) {
+  .manpower-icon-2:before{
+    top: -1.6vw;
+    left: 0.35vw;
+  }
+}
+
+/*ammo icon*/
+.ammo-icon {
+  color: $white;
+  position: absolute;
+  margin-top: 1.6vw;
+  width: 2vw;
+  height: 0.52vw;
+  border-radius: 2vw;
+  border: solid 0.1vw currentColor;
+  background-color: currentColor;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ammo-icon:before {
+  content: '';
+  position: absolute;
+  left: -1.85vw;
+  top: -0.1vw;
+  $left-right: 0.8vw;
+  border-left: solid $left-right transparent;
+  border-right: solid $left-right currentColor;
+  $top-bottom: 0.26vw;
+  border-top: solid $top-bottom transparent;
+  border-bottom: solid $top-bottom transparent;
+}
+@media only screen and (max-width: 700px) {
+  .ammo-icon:before{
+    $left-right: 0.8vw;
+    border-left: solid $left-right transparent;
+    border-right: solid $left-right currentColor;
+    $top-bottom: 0.3vw;
+    border-top: solid $top-bottom transparent;
+    border-bottom: solid $top-bottom transparent;
+  }
+}
+
+/*ration icon*/
+.rations-icon {
+  color: $white;
+  position: absolute;
+  margin-left: 1vw;
+  margin-top: 1.6vw;
+  width: 2.5vw;
+  height: 0.85vw;
+  border-radius: 0.1vw;
+  border: solid 0.1vw currentColor;
+  background-color: currentColor;
+}
+.rations-icon:before {
+  content: '';
+  position: absolute;
+  top: -0.8vw;
+  left: -0.1vw;
+  width: 2.5vw;
+  height: 0.35vw;
+  color: $white;
+  background-color: currentColor;
+}
+@media only screen and (max-width: 700px) {
+  .rations-icon:before{
+    left: -0.2vw;
+  }
+}
+
+/*parts icon*/
+.parts-icon{
+  position: absolute;
+  color: $white;
+  font-size: 2vw;
+}
+
+
+
+
+
+
+
+
